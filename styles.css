@@ -1,0 +1,87 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Light", "Ariel", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #003135;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #024950;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+    box-sizing: inherit;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.game-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 5px solid black;
+    background-color: white;
+}
+
+.button-container {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.selection-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button-container button {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #4914ff;
+    color: inherit;
+    border: none;
+    box-shadow: 0 5px black;
+    cursor: pointer;
+    outline: none;
+}
+#rainbow-button {
+    background-color: crimson;
+}
+.button-container button:active {
+    transform: translateY(5px);
+}
+
+.box {
+    box-sizing: border-box;
+    border: lightgray 1px solid;
+}
+
+.color-pick {
+    width:100px;
+    height:100px;
+    overflow: hidden;
+    border-radius:100%;
+}
+
+input[type='color'] {
+    width:100%;
+    height:100%;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #0000001A;
+    transform: scale(1.5);
+}
