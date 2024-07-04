@@ -40,23 +40,22 @@ selectionButtons.addEventListener("click", (event) => {
 
     target.style.backgroundColor = "crimson";
 
-    switch (target.id) {
+    let mode;
+    switch(target.id) {
         case "eraser-button":
-            modes.eraserMode = true;
-            modes.colourMode = false;
-            modes.rainbowMode = false;
+            mode = "eraserMode";
             break;
         case "rainbow-button":
-            modes.eraserMode = false;
-            modes.colourMode = false;
-            modes.rainbowMode = true;
+            mode = "rainbowMode";
             break;
-        case "set-color-button":
-            modes.eraserMode = false;
-            modes.colourMode = true;
-            modes.rainbowMode = false;
+        case "set-colour-button":
+            mode = "colourMode";
             break;
     }
+
+    Object.keys(modes).forEach((key) => {
+        modes[key] = key === mode;
+    })
 });
 
 document.querySelector("#clear-button").addEventListener("click", () => clearBoard());
